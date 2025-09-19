@@ -2,6 +2,7 @@
 import React from "react";
 import "../../styles/Common/SectionOne.css";
 import LogisticsLogo from "../../assets/logistics logo.jpg";
+import { Link } from "react-router-dom"
 
 const SectionOne = () => {
   return (
@@ -13,7 +14,7 @@ const SectionOne = () => {
           TRANSPORTATION SERVICES <br />
           ACROSS INDIA
         </h1>
-        <button className="contact-btn">CONTACT US</button>
+        <Link to="/support"className="contact-btn"style={{ textDecoration: "none" }}>CONTACT US</Link>
       </div>
 
       {/* Right Image */}

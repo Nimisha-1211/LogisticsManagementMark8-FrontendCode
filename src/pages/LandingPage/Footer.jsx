@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
@@ -34,7 +32,7 @@ function Footer() {
               <li className="mb-2"><Link to="/careers" className="text-dark text-decoration-none hover-opacity">Careers</Link></li>
               <li className="mb-2"><Link to="/employees" className="text-dark text-decoration-none hover-opacity">Employees</Link></li>
               <li className="mb-2"><Link to="/login" className="text-dark text-decoration-none hover-opacity">Login</Link></li>
-              {/* <li className="mb-2"><Link to="/track-shipments" className="text-dark text-decoration-none hover-opacity">Track Shipments</Link></li> */}
+              
             </ul>
           </div>
 

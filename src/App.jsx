@@ -17,6 +17,7 @@ import RiskManagement from "./pages/LandingPage/RiskManagement.jsx";
 import CustomerSupport from "./pages/LandingPage/CustomerSupport";
 import TechnicalAssistance from "./pages/LandingPage/TechnicalAssistance";
 import TrainingTutorials from "./pages/LandingPage/TrainingTutorials";
+import Employees from "./pages/LandingPage/Employees.jsx";
 
 
 // Auth Components
@@ -83,6 +84,7 @@ function App() {
         <Route path="/support/customer" element={<CustomerSupport />} />
         <Route path="/support/technical" element={<TechnicalAssistance />} />
         <Route path="/support/training" element={<TrainingTutorials />} />
+        <Route path="/employees" element={<Employees />} />
 
 
 

@@ -67,10 +67,7 @@ const Shipments = () => {
               <p><strong>Quantity:</strong> {shipment.quantity}</p>
               <p><strong>Destination:</strong> {shipment.deliveryAddress?.address}</p>
               <p><strong>ETA:</strong> {new Date(shipment.expectedDeliveryDate).toDateString()}</p>
-              {/* <p><strong>Driver:</strong> {shipment.assignDriver ? shipment.assignDriver.name : "Not Assigned"}</p> */}
-              {/* <Link to={`/admin/shipments/${shipment.orderId}`} className="details-btn">
-                View Details
-              </Link> */}
+              
             </div>
           ))
         ) : (

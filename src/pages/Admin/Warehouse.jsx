@@ -106,10 +106,10 @@ const Warehouse = () => {
           )}
         </div>
 
-        {/* ✅ Table view */}
+        {/* Table view */}
         <InventoryTable items={filteredItems} />
 
-        {/* ✅ Card view */}
+        {/*  Card view */}
         <div className="row mt-4">
           {filteredItems.map((item) => {
             const itemId = item.id || item._id || uuidv4();
@@ -138,7 +138,7 @@ const Warehouse = () => {
         </div>
       </div>
 
-      {/* ✅ Add/Edit Form */}
+      {/* Add/Edit Form */}
       {role === 'Admin' && (
         <div className="card-box mt-4">
           <h4 className="section-title">

@@ -228,7 +228,7 @@ function LoginPage() {
 
                   <div className="text-center mb-2">OR</div>
 
-                  {/* ✅ Google login button */}
+                  {/* Google login button */}
                   <GoogleLogin
                     onSuccess={handleGoogleLogin}
                     onError={() => console.log("Google login failed")}

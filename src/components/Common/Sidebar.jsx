@@ -1,7 +1,5 @@
-
-
 import React from 'react';
-import "../../styles/Common/Sidebar.css"; // Correct external CSS path
+import "../../styles/Common/Sidebar.css"; 
 
 const Sidebar = () => {
   return (

@@ -1,7 +1,7 @@
 
 import React, { createContext, useState, useContext, useEffect } from "react";
 
-// C
+
 const WarehouseContext = createContext();
 
 
