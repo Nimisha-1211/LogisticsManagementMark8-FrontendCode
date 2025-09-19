@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import EmpImage from "../../assets/Employees.jpg";
 
 function Employees() {
-  // Dummy employee data
+  
   const employees = [
     { id: 1, name: "John Doe", role: "Driver" },
     { id: 2, name: "Jane Smith", role: "Dispatcher" },

@@ -1,4 +1,4 @@
-/* Section wrapper */
+
 .section-two {
   text-align: center;
   margin: 60px auto;
@@ -6,7 +6,7 @@
   max-width: 1200px;
 }
 
-/* Title styling */
+
 .section-two-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -16,7 +16,7 @@
   position: relative;
 }
 
-/* Optional underline effect */
+
 .section-two-title::after {
   content: "";
   display: block;
@@ -27,7 +27,7 @@
   border-radius: 2px;
 }
 
-/* Container for the whole section */
+
 .section-two-container {
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@
   margin: 0 auto;
 }
 
-/* Each card */
+
 .section-two-card {
   flex: 1 1 calc(25% - 25px); 
   min-width: 270px;           
@@ -49,13 +49,13 @@
   text-align: center;
 }
 
-/* Hover effect */
+
 .section-two-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* Card icons */
+
 .section-two-icon {
   font-size: 2.8rem;
   margin: 0 auto 15px auto;  
@@ -64,7 +64,6 @@
   text-align: center;
 }
 
-/* Card heading */
 .section-two-card h3 {
   font-size: 1.3rem;
   font-weight: 600;
@@ -72,7 +71,7 @@
   margin-bottom: 12px;
 }
 
-/* Card paragraph */
+
 .section-two-card p {
   font-size: 1rem;
   color: #444;
@@ -81,7 +80,6 @@
   margin: 0 auto;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .section-two-card {
     flex: 1 1 calc(50% - 25px); 

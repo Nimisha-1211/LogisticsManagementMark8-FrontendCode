@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../../styles/admin/Shipment.css";
 
 const ShipmentDetails = () => {
-  const { id } = useParams(); // orderId from route
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const [shipment, setShipment] = useState(null);
   const [loading, setLoading] = useState(true);

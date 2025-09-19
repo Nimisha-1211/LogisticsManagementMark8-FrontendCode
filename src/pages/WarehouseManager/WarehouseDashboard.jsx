@@ -7,7 +7,7 @@ import {
 } from "recharts";
 
 function WarehouseDashboard() {
-  // State for data from backend
+  
   const [monthlyInventory, setMonthlyInventory] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
   const [recentActivity, setRecentActivity] = useState([]);
@@ -23,7 +23,7 @@ function WarehouseDashboard() {
         });
         const data = await res.json();
 
-        // Update state with backend data
+        
         setMonthlyInventory(data.monthlyInventory || []);
         setCategoryData(data.categoryData || []);
         setRecentActivity(data.recentActivity || []);

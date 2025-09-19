@@ -12,13 +12,13 @@ function AssignedShipments() {
         const data = await res.json();
 
         if (data.success) {
-          // Map the backend data to the shipment format
+          
           const mappedShipments = data.data.map((driver, index) => ({
             id: index + 1,
             orderId: driver._id,
             customerName: driver.driverName,
             address: driver.address,
-            status: "Assigned", // default status
+            status: "Assigned", 
             vehicleName: driver.vehicleName,
             vehiclePlateNo: driver.vehiclePlateNo,
             carrierName: driver.carrierName

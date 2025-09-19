@@ -4,21 +4,21 @@ import "react-toastify/dist/ReactToastify.css";
 import "../../styles/admin/AssignDriver.css";
 
 const AssignDriver = () => {
-  const [shipmentId, setShipmentId] = useState(""); // Mongo _id of order
-  const [driverId, setDriverId] = useState("");     // Mongo _id of driver
+  const [shipmentId, setShipmentId] = useState(""); 
+  const [driverId, setDriverId] = useState("");     
   const [assignments, setAssignments] = useState([]);
-  const [shipments, setShipments] = useState([]); // Orders from backend
-  const [drivers, setDrivers] = useState([]);     // Drivers from backend
-  const [role] = useState("Admin"); // Switch to "Viewer" to restrict
+  const [shipments, setShipments] = useState([]); 
+  const [drivers, setDrivers] = useState([]);     
+  const [role] = useState("Admin"); 
 
-  // ✅ Fetch orders (assignDriver = null)
+  
   useEffect(() => {
     const fetchShipments = async () => {
       try {
         const res = await fetch("http://localhost:3000/orders/assignShipment");
         const data = await res.json();
         if (data.success) {
-          setShipments(data.data); // backend returns data[]
+          setShipments(data.data); 
         } else {
           toast.error("Failed to fetch orders");
         }
@@ -27,7 +27,7 @@ const AssignDriver = () => {
       }
     };
 
-    // ✅ Fetch available drivers
+    
     const fetchDrivers = async () => {
       try {
         const res = await fetch("http://localhost:3000/driver/driver");
@@ -46,7 +46,7 @@ const AssignDriver = () => {
     fetchDrivers();
   }, []);
 
-  // ✅ Assign driver API call
+  
   const handleAssign = async (e) => {
     e.preventDefault();
     if (!shipmentId || !driverId) {
@@ -59,8 +59,8 @@ const AssignDriver = () => {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          orderId: shipmentId, // ✅ Mongo _id
-          driverId: driverId,  // ✅ Mongo _id
+          orderId: shipmentId, 
+          driverId: driverId,  
         }),
       });
 
@@ -71,11 +71,11 @@ const AssignDriver = () => {
         const assignedOrder = shipments.find((s) => s._id === shipmentId);
         const assignedDriver = drivers.find((d) => d._id === driverId);
 
-        // Update assignment history
+        
         const newAssign = {
           id: Date.now(),
-          mongoOrderId: shipmentId, // Mongo _id
-          orderId: assignedOrder?.orderId || "N/A", // custom orderId
+          mongoOrderId: shipmentId, 
+          orderId: assignedOrder?.orderId || "N/A", 
           product: assignedOrder?.product?.productName || "N/A",
           driver: assignedDriver?.driverName || driverId,
           time: new Date().toLocaleString(),
@@ -83,7 +83,7 @@ const AssignDriver = () => {
 
         setAssignments([newAssign, ...assignments]);
 
-        // Remove assigned order from dropdown
+        
         setShipments(shipments.filter((s) => s._id !== shipmentId));
         setShipmentId("");
         setDriverId("");

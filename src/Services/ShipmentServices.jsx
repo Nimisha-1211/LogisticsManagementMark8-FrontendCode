@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// This is a sample list of shipments. In a real app, this would come from an API.
+
 const initialShipments = [
   { id: 1, trackingNumber: 'SHP-12345', status: 'In Transit', origin: 'New York', destination: 'Los Angeles' },
   { id: 2, trackingNumber: 'SHP-67890', status: 'Delivered', origin: 'Chicago', destination: 'Houston' },

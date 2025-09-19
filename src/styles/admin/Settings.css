@@ -1,4 +1,4 @@
-/* Layout */
+
 .app-container {
   display: flex;
   min-height: 100vh;
@@ -6,10 +6,10 @@
   font-family: Arial, sans-serif;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 240px;
-  background: #1e3a5f; /* Dark blue */
+  background: #1e3a5f; 
   color: white;
   padding: 20px;
 }
@@ -48,7 +48,7 @@
   font-weight: bold;
 }
 
-/* Main Content */
+
 .content {
   flex: 1;
   padding: 30px;
@@ -60,7 +60,7 @@
   margin-bottom: 20px;
 }
 
-/* Card style */
+
 .settings-card {
   background: #fff;
   border-radius: 6px;
@@ -75,7 +75,7 @@
   margin-bottom: 16px;
 }
 
-/* Options with toggle */
+
 .settings-option {
   display: flex;
   justify-content: space-between;
@@ -89,7 +89,7 @@
   cursor: pointer;
 }
 
-/* Buttons */
+
 button {
   padding: 8px 14px;
   border: none;
@@ -100,7 +100,7 @@ button {
   transition: background 0.2s;
 }
 
-/* Neutral button */
+
 button {
   background: #e0e0e0;
   color: #333;
@@ -110,7 +110,7 @@ button:hover {
   background: #d5d5d5;
 }
 
-/* Primary (green) */
+
 button.primary {
   background: #28a745;
   color: #fff;
@@ -120,7 +120,7 @@ button.primary:hover {
   background: #218838;
 }
 
-/* Danger (red) */
+
 button.danger {
   background: #dc3545;
   color: #fff;

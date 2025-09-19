@@ -10,7 +10,7 @@ function Inventory() {
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [statusFilter, setStatusFilter] = useState("All");
 
-  // edit state
+  
   const [editingId, setEditingId] = useState(null);
   const [editProduct, setEditProduct] = useState({
     productName: "",
@@ -23,7 +23,7 @@ function Inventory() {
     rack: "",
   });
 
-  // Fetch inventory from backend
+  
   useEffect(() => {
     async function fetchData() {
       try {
@@ -58,7 +58,7 @@ function Inventory() {
     return matchesSearch && matchesCategory && matchesStatus;
   });
 
-  // ---------- Edit Product inline ----------
+  
   const startEditing = (item) => {
     setEditingId(item._id);
     setEditProduct({
@@ -155,7 +155,7 @@ function Inventory() {
     }
   };
 
-  // ---------- Delete Product ----------
+  
   const handleDelete = async (id) => {
     try {
       const res = await fetch(`http://localhost:3000/stock/stock/${id}`, {

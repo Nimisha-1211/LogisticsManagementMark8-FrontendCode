@@ -12,7 +12,7 @@ const Shipments = () => {
   useEffect(() => {
     async function fetchShipments() {
       try {
-        const res = await fetch("http://localhost:3000/orders/order"); // ✅ backend URL
+        const res = await fetch("http://localhost:3000/orders/order");
         if (!res.ok) throw new Error(`Error: ${res.status}`);
         const data = await res.json();
         console.log("API response:", data);

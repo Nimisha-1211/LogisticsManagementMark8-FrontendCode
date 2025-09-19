@@ -1,4 +1,4 @@
-// src/pages/Consulting.jsx
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import SupplyChainImg from "../../assets/ConsultingSupplychain.jpg";

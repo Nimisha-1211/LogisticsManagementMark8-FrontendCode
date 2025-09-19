@@ -1,14 +1,13 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Define the initial state for shipment data
 const initialShipmentState = {
   shipments: [],
   loading: false,
   error: null,
   selectedShipment: null,
   filters: {
-    status: 'all', // 'all', 'pending', 'in-transit', 'delivered', 'cancelled'
+    status: 'all', 
     searchTerm: '',
     dateRange: null
   },
@@ -21,10 +20,10 @@ const initialShipmentState = {
   }
 };
 
-// Create the context
+
 const ShipmentContext = createContext();
 
-// Custom hook to use the shipment context
+
 export const useShipment = () => {
   const context = useContext(ShipmentContext);
   if (!context) {
@@ -33,11 +32,11 @@ export const useShipment = () => {
   return context;
 };
 
-// ShipmentProvider component
+
 export const ShipmentProvider = ({ children }) => {
   const [state, setState] = useState(initialShipmentState);
 
-  // Mock data for demonstration - in real app, this would come from API
+  
   const mockShipments = [
     {
       id: 'SH001',
@@ -84,19 +83,16 @@ export const ShipmentProvider = ({ children }) => {
     }
   ];
 
-  // Load initial data (simulate API call)
+
   useEffect(() => {
     const loadShipments = async () => {
       setState(prev => ({ ...prev, loading: true }));
       
       try {
-        // Simulate API delay
         await new Promise(resolve => setTimeout(resolve, 1000));
         
-        // In real app, this would be: const response = await api.getShipments();
         const shipments = mockShipments;
         
-        // Calculate statistics
         const statistics = calculateStatistics(shipments);
         
         setState(prev => ({
@@ -118,7 +114,7 @@ export const ShipmentProvider = ({ children }) => {
     loadShipments();
   }, []);
 
-  // Calculate shipment statistics
+  
   const calculateStatistics = (shipments) => {
     const stats = {
       total: shipments.length,
@@ -150,7 +146,7 @@ export const ShipmentProvider = ({ children }) => {
     return stats;
   };
 
-  // Add a new shipment
+  
   const addShipment = (shipmentData) => {
     const newShipment = {
       ...shipmentData,
@@ -174,7 +170,7 @@ export const ShipmentProvider = ({ children }) => {
     return newShipment;
   };
 
-  // Update shipment status
+  
   const updateShipmentStatus = (shipmentId, newStatus) => {
     setState(prev => {
       const updatedShipments = prev.shipments.map(shipment =>
@@ -196,7 +192,7 @@ export const ShipmentProvider = ({ children }) => {
     });
   };
 
-  // Delete a shipment
+  
   const deleteShipment = (shipmentId) => {
     setState(prev => {
       const updatedShipments = prev.shipments.filter(shipment => shipment.id !== shipmentId);
@@ -211,7 +207,7 @@ export const ShipmentProvider = ({ children }) => {
     });
   };
 
-  // Select a shipment for detailed view
+  
   const selectShipment = (shipmentId) => {
     const shipment = state.shipments.find(s => s.id === shipmentId);
     setState(prev => ({
@@ -220,7 +216,6 @@ export const ShipmentProvider = ({ children }) => {
     }));
   };
 
-  // Clear selected shipment
   const clearSelectedShipment = () => {
     setState(prev => ({
       ...prev,
@@ -228,7 +223,6 @@ export const ShipmentProvider = ({ children }) => {
     }));
   };
 
-  // Update filters
   const updateFilters = (newFilters) => {
     setState(prev => ({
       ...prev,
@@ -236,17 +230,17 @@ export const ShipmentProvider = ({ children }) => {
     }));
   };
 
-  // Get filtered shipments based on current filters
+  
   const getFilteredShipments = () => {
     const { status, searchTerm } = state.filters;
     let filtered = state.shipments;
 
-    // Filter by status
+    
     if (status !== 'all') {
       filtered = filtered.filter(shipment => shipment.status === status);
     }
 
-    // Filter by search term (tracking number, sender name, recipient name)
+    
     if (searchTerm) {
       const searchLower = searchTerm.toLowerCase();
       filtered = filtered.filter(shipment =>
@@ -259,14 +253,14 @@ export const ShipmentProvider = ({ children }) => {
     return filtered;
   };
 
-  // Track shipment by tracking number
+
   const trackShipment = (trackingNumber) => {
     return state.shipments.find(shipment => 
       shipment.trackingNumber === trackingNumber
     );
   };
 
-  // Clear any errors
+  
   const clearError = () => {
     setState(prev => ({
       ...prev,
@@ -274,9 +268,9 @@ export const ShipmentProvider = ({ children }) => {
     }));
   };
 
-  // Context value object
+  
   const contextValue = {
-    // State
+    
     shipments: state.shipments,
     loading: state.loading,
     error: state.error,
@@ -284,7 +278,7 @@ export const ShipmentProvider = ({ children }) => {
     filters: state.filters,
     statistics: state.statistics,
     
-    // Actions
+    
     addShipment,
     updateShipmentStatus,
     deleteShipment,
@@ -303,8 +297,8 @@ export const ShipmentProvider = ({ children }) => {
   );
 };
 
-// Export the context for direct access if needed (though using the hook is preferred)
+
 export { ShipmentContext };
 
-// Export default as the provider for convenience
+
 export default ShipmentProvider;

@@ -19,7 +19,7 @@ function LoginPage() {
     email: '',
     password: '',
     confirmPassword: '',
-    role: '' // ✅ matches backend model
+    role: '' 
   });
 
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ function LoginPage() {
   const handleLoginClick = (role) => {
     setFormData((prev) => ({
       ...prev,
-      role: role, // ✅ use role instead of employment
+      role: role, 
     }));
     setSelectedRole(role);
   };
@@ -84,7 +84,7 @@ function LoginPage() {
     }
   };
 
-  // ✅ Redirect helper
+
   const redirectUser = (role) => {
     if (!role) {
       console.error("No role found for redirect");
@@ -100,7 +100,7 @@ function LoginPage() {
     else navigate('/'); // fallback
   };
 
-  // ✅ Google login/signup handler
+  
   const handleGoogleLogin = async (credentialResponse) => {
     try {
       const token = credentialResponse.credential;
@@ -119,7 +119,7 @@ function LoginPage() {
           email: decoded.email,
           name: decoded.name,
           picture: decoded.picture,
-          role: selectedRole || 'User' // ✅ send role properly
+          role: selectedRole || 'User' 
         }),
       });
 

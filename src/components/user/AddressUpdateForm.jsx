@@ -35,7 +35,6 @@ const AddressUpdateForm = ({ currentAddress, onSave, onCancel }) => {
     
     setIsSaving(true);
     
-    // Simulate API call
     setTimeout(() => {
       onSave && onSave(address);
       setIsSaving(false);

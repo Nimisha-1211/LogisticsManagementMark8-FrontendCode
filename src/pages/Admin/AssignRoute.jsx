@@ -5,7 +5,7 @@ const AssignRoute = () => {
   const [selectedRoute, setSelectedRoute] = useState("");
   const [selectedDriver, setSelectedDriver] = useState("");
 
-  // History state - dynamic (initial dummy data)
+  
   const [history, setHistory] = useState([
     {
       route: "Route A",
@@ -21,20 +21,20 @@ const AssignRoute = () => {
     },
   ]);
 
-  // Function to add new assignment
+  
   const handleAssign = () => {
     if (selectedRoute && selectedDriver) {
       const newEntry = {
         route: selectedRoute,
         driver: selectedDriver,
-        time: new Date().toLocaleString(), // current date-time
+        time: new Date().toLocaleString(),
         status: "Assigned",
       };
 
-      // Add new entry to history
+      
       setHistory([newEntry, ...history]);
 
-      // Reset dropdowns
+      
       setSelectedRoute("");
       setSelectedDriver("");
     } else {

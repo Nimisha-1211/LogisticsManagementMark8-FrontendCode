@@ -33,7 +33,7 @@ function Team() {
           <div className="col-12 col-sm-6 col-md-3" key={index}>
             <div className="card h-100 shadow-sm text-center">
               <img
-                src={member.image}  // Use member.image here
+                src={member.image}  
                 className="card-img-top img-fluid"
                 alt={member.name}
               />

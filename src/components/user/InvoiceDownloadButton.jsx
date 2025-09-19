@@ -8,9 +8,8 @@ const InvoiceDownloadButton = ({ shipmentId, invoiceData }) => {
   const handleDownload = async () => {
     setIsDownloading(true);
 
-    // Simulate download process
+    
     setTimeout(() => {
-      // In a real app, this would trigger actual file download
       const element = document.createElement("a");
       const file = new Blob([JSON.stringify(invoiceData, null, 2)], {
         type: "application/json",
@@ -24,7 +23,6 @@ const InvoiceDownloadButton = ({ shipmentId, invoiceData }) => {
       setIsDownloading(false);
       setIsDownloaded(true);
 
-      // Reset downloaded state after 3 seconds
       setTimeout(() => setIsDownloaded(false), 3000);
     }, 1500);
   };

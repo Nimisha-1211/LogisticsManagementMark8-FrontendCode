@@ -9,7 +9,6 @@ const UserProfile = ({ user, onUpdate }) => {
   const handleSave = async () => {
     setIsSaving(true);
 
-    // Simulate API call
     setTimeout(() => {
       onUpdate && onUpdate(editedUser);
       setIsEditing(false);

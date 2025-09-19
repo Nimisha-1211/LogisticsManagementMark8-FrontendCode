@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
-import SupportBanner from "../../assets/Support.jpg"; // banner image
+import SupportBanner from "../../assets/Support.jpg";
 
 function Support() {
   const navigate = useNavigate();

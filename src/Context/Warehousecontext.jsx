@@ -1,17 +1,17 @@
 
 import React, { createContext, useState, useContext, useEffect } from "react";
 
-// Create the context
+// C
 const WarehouseContext = createContext();
 
-// Custom hook to use the context
+
 export const useWarehouse = () => {
   return useContext(WarehouseContext);
 };
 
-// Provider component
+
 export const WarehouseProvider = ({ children }) => {
-  // Example states for warehouse, shipments, and drivers
+  
   const [warehouses, setWarehouses] = useState([]);
   const [shipments, setShipments] = useState([]);
   const [drivers, setDrivers] = useState([]);
@@ -20,7 +20,7 @@ export const WarehouseProvider = ({ children }) => {
   const fetchWarehouses = async () => {
     setLoading(true);
     try {
-      const response = await fetch("/api/warehouses"); // Change to your API endpoint
+      const response = await fetch("/api/warehouses"); 
       const data = await response.json();
       setWarehouses(data);
     } catch (error) {
@@ -30,11 +30,11 @@ export const WarehouseProvider = ({ children }) => {
     }
   };
 
-  // Example: Fetch shipments
+  
   const fetchShipments = async () => {
     setLoading(true);
     try {
-      const response = await fetch("/api/shipments"); // Change to your API endpoint
+      const response = await fetch("/api/shipments"); 
       const data = await response.json();
       setShipments(data);
     } catch (error) {
@@ -44,7 +44,7 @@ export const WarehouseProvider = ({ children }) => {
     }
   };
 
-  // Example: Assign driver to shipment
+  
   const assignDriver = (shipmentId, driverId) => {
     setShipments((prev) =>
       prev.map((shipment) =>
@@ -55,7 +55,7 @@ export const WarehouseProvider = ({ children }) => {
     );
   };
 
-  // Load initial data when component mounts
+  
   useEffect(() => {
     fetchWarehouses();
     fetchShipments();
@@ -71,7 +71,7 @@ export const WarehouseProvider = ({ children }) => {
         fetchWarehouses,
         fetchShipments,
         assignDriver,
-        setDrivers, // For updating driver list
+        setDrivers, 
       }}
     >
       {children}

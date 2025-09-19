@@ -5,7 +5,7 @@ function UserManagement() {
   const [newUser, setNewUser] = useState({ username: "", type: "" });
   const [showModal, setShowModal] = useState(false);
 
-  // Fetch users from backend on mount
+  
   useEffect(() => {
     async function fetchUsers() {
       try {
@@ -15,7 +15,7 @@ function UserManagement() {
         const data = await res.json();
 
         if (data.success) {
-          setUsers(data.users); // backend sends {success, count, users}
+          setUsers(data.users); 
         } else {
           console.error("Error fetching users:", data.message);
         }
@@ -26,12 +26,12 @@ function UserManagement() {
     fetchUsers();
   }, []);
 
-  // Handle input changes
+  
   const handleChange = (e) => {
     setNewUser({ ...newUser, [e.target.name]: e.target.value });
   };
 
-  // Submit form → save user in backend
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -46,7 +46,7 @@ function UserManagement() {
       const data = await res.json();
 
       if (data.success) {
-        setUsers([...users, data.user]); // append new user
+        setUsers([...users, data.user]); 
         setNewUser({ username: "", type: "" });
         setShowModal(false);
       } else {

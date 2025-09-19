@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-
-// Common components
+// Common Components
 import NavbarComponent from "./components/Common/NavbarComponent.jsx";
 import HomePage from "./pages/LandingPage/HomePage.jsx";
 import AboutUsPage from "./pages/LandingPage/AboutUsPage.jsx";
@@ -20,10 +19,9 @@ import TechnicalAssistance from "./pages/LandingPage/TechnicalAssistance";
 import TrainingTutorials from "./pages/LandingPage/TrainingTutorials";
 
 
-// Auth Page
+// Auth Components
 import LoginPage from "./pages/auth/LoginPage.jsx";
-
-// Admin Pages
+// Admin Components
 import AdminLayout from "./pages/Admin/AdminLayout.jsx";
 import AdminDashboard from "./pages/Admin/AdminDashboard.jsx";
 import UserManagement from "./pages/Admin/UserManagement.jsx";
@@ -39,20 +37,20 @@ import AssignVehicle from "./pages/Admin/AssignVehicle.jsx";
 import AssignManager from "./pages/Admin/AssignWarehouseManager.jsx";
 import AssignRoute from "./pages/Admin/AssignRoute.jsx";
 
-// Warehouse Manager Pages
+// Warehouse Manager Components
 import WarehouseDashboard from "./pages/WarehouseManager/WarehouseDashboard.jsx";
 import Inventory from "./pages/WarehouseManager/Inventory.jsx";
 import Orders from "./pages/WarehouseManager/Orders.jsx";
 
 
-// Delivery Staff Pages
+// Delivery Staff Components
 import DeliveryDashboard from "./pages/DeliveryStaff/DeliveryDashboard.jsx";
 import AssignedShipments from "./pages/DeliveryStaff/AssignedShipments.jsx";
 import UpdateShipmentStatus from "./pages/DeliveryStaff/UpdateShipmentStatus.jsx";
 import DeliveryShipmentCard from "./pages/DeliveryStaff/DeliveryShipmentCard.jsx";
-import DeliveryLayout from "./pages/DeliveryStaff/DeliveryLayout.jsx"; // Delivery Layout with sidebar
+import DeliveryLayout from "./pages/DeliveryStaff/DeliveryLayout.jsx"; 
 
-// User Pages
+// User Components
 import UserDashboard from "./pages/User/UserDashboard.jsx";
 import UserProfile from "./components/user/UserProfile.jsx";
 import AddressUpdateForm from "./components/user/AddressUpdateForm.jsx";

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { toast } from "react-toastify"; // ✅ for success/error notifications
+import { toast } from "react-toastify"; 
 
 function DeliveryDashboard() {
   const [loading, setLoading] = useState(true);
-  const [orders, setOrders] = useState([]); // ✅ renamed shipments → orders
+  const [orders, setOrders] = useState([]); 
   const [notifications, setNotifications] = useState([]);
 
-  const driverId = "68c95c5cda61dd72a6f3961b"; // mock driver id
+  const driverId = "68c95c5cda61dd72a6f3961b"; 
 
-  // ✅ Fetch driver orders
+  
   useEffect(() => {
     const fetchOrders = async () => {
       try {
@@ -22,7 +22,7 @@ function DeliveryDashboard() {
 
         setOrders(data);
 
-        // ✅ Notifications setup (example: from orders list)
+    
         const notes = data.map(
           (o) =>
             `Order #${o._id} is currently ${o.status || "Pending"}`
@@ -39,7 +39,7 @@ function DeliveryDashboard() {
     fetchOrders();
   }, [driverId]);
 
-  // ✅ Update order status
+  
   const handleStatusChange = async (id, newStatus) => {
     try {
       const order = orders.find((o) => o._id === id);
@@ -48,8 +48,8 @@ function DeliveryDashboard() {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          orderId: order._id, // custom orderId
-          driverId: order.assignDriver?._id || driverId, // fallback to current driver
+          orderId: order._id, 
+          driverId: order.assignDriver?._id || driverId, 
           status: newStatus,
         }),
       });
@@ -57,7 +57,7 @@ function DeliveryDashboard() {
       if (!res.ok) throw new Error("Failed to update order");
       const data = await res.json();
 
-      // ✅ update UI
+      
       setOrders((prev) =>
         prev.map((o) => (o._id === id ? { ...o, ...data.order } : o))
       );

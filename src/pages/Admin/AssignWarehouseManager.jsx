@@ -20,7 +20,7 @@ const AssignWarehouseManager = () => {
       time: "2025-08-20 4:15 PM",
       status: "Assigned",
     },
-  ]); // Dummy data
+  ]); 
 
   const handleAssign = () => {
     if (selectedWarehouse && selectedManager) {

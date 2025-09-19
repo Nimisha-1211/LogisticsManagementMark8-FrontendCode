@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import UserShipmentCard from "../../components/user/UserShipmentCard";
-import { dummyShipments } from "./UserDashboard"; // ✅ Import shared dummy data
+import { dummyShipments } from "./UserDashboard"; // 
 
 const ShipmentHistory = () => {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    // Load shipments from the shared dummy data
+    
     setHistory(dummyShipments);
   }, []);
 

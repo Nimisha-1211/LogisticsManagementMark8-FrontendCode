@@ -5,7 +5,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 220px;
   background: #2c3e50;
@@ -30,7 +30,7 @@
   color: #ff4d4d;
 }
 
-/* Main content */
+
 .orders-main {
   flex: 1;
   padding: 20px;
@@ -39,7 +39,7 @@
   margin-bottom: 20px;
 }
 
-/* Cards */
+
 .cards {
   display: flex;
   gap: 15px;
@@ -58,7 +58,7 @@
 .card.completed { background: #2ecc71; }
 .card.cancelled { background: #e74c3c; }
 
-/* Controls */
+
 .controls {
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@
   border-radius: 5px;
 }
 
-/* Table */
+
 table {
   width: 100%;
   border-collapse: collapse;

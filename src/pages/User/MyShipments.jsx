@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import UserShipmentCard from "../../components/user/UserShipmentCard";
-import { dummyShipments } from "./UserDashboard"; // ✅ import shared dummy data
+import { dummyShipments } from "./UserDashboard"; 
 
 const MyShipments = () => {
   const [shipments, setShipments] = useState([...dummyShipments]);
 
   useEffect(() => {
-    // Keep syncing with dummyShipments whenever it changes
+  
     const interval = setInterval(() => {
       setShipments([...dummyShipments]);
-    }, 500); // check every 0.5s
+    }, 500); 
 
     return () => clearInterval(interval);
   }, []);

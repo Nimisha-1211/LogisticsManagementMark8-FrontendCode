@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Package, TrendingUp, Clock, CheckCircle } from "lucide-react";
 import UserShipmentCard from "../../components/user/UserShipmentCard";
 
-// Shared dummy shipments
+
 const dummyShipments = [
   {
     _id: "1",
@@ -40,7 +40,7 @@ const dummyShipments = [
   },
 ];
 
-// Shared dummy stats
+
 const dummyStats = [
   { title: "Total Shipments", value: 15, change: "+5%", icon: Package, color: "primary" },
   { title: "Active Shipments", value: 4, change: "+2%", icon: Clock, color: "warning" },
@@ -145,5 +145,5 @@ const UserDashboard = () => {
   );
 };
 
-export { dummyShipments }; // 🔥 export for reuse
+export { dummyShipments };
 export default UserDashboard;

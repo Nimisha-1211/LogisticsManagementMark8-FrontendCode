@@ -8,9 +8,9 @@ const AssignDriver = () => {
   const [shipmentId, setShipmentId] = useState('');
   const [driverId, setDriverId] = useState('');
   const [assignments, setAssignments] = useState([]);
-  const [role, setRole] = useState('WarehouseManager'); // Change to 'Viewer' to restrict
+  const [role, setRole] = useState('WarehouseManager'); 
 
-  // Mock data (later can be replaced with API)
+  
   const shipments = [
     { id: 'SHP001', name: 'Shipment A' },
     { id: 'SHP002', name: 'Shipment B' },

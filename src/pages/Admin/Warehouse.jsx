@@ -10,7 +10,7 @@ import WarehouseItem from "../../components/Admin/WarehouseItem";
 const Warehouse = () => {
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState('');
-  const [role, setRole] = useState('Admin'); // Simulate role
+  const [role, setRole] = useState('Admin'); 
   const [editingItem, setEditingItem] = useState(null);
   const [form, setForm] = useState({ name: '', quantity: '', location: '' });
 
@@ -35,7 +35,7 @@ const Warehouse = () => {
     fetchItems();
   }, []);
 
-  // ✅ Safe filtering
+  
   const filteredItems = items.filter(item => {
     const itemName = item?.name || item?.productName || "";
     return itemName.toLowerCase().includes(search.toLowerCase());

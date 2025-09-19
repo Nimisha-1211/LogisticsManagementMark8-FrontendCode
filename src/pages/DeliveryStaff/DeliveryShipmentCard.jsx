@@ -1,7 +1,7 @@
 import React from "react";
 
 function DeliveryShipmentCard({ shipment, onStatusChange }) {
-  // ✅ Function to decide badge color
+  
   const getBadgeClass = (status) => {
     switch (status) {
       case "Assigned":

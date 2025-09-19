@@ -1,4 +1,4 @@
-/* Container */
+
 .shipments-container {
 padding: 30px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +6,7 @@ background-color: #f9f9f9;
 min-height: 100vh;
 }
 
-/* Title */
+
 .shipments-title {
 text-align: center;
 font-size: 32px;
@@ -14,7 +14,7 @@ margin-bottom: 30px;
 color: #333;
 }
 
-/* Filter bar */
+
 .filter-bar {
 display: flex;
 flex-wrap: wrap;
@@ -39,14 +39,14 @@ transition: border 0.2s ease-in-out;
 border-color: white;
 }
 
-/* Grid for shipment cards */
+
 .shipments-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 gap: 25px;
 }
 
-/* Card styling */
+
 .shipment-card {
 background-color: #ffffff;
 border-radius: 12px;
@@ -59,14 +59,12 @@ transition: transform 0.2s ease;
 transform: translateY(-5px);
 }
 
-/* Product Image */
 .shipment-image {
 width: 100%;
 height: 220px;
 object-fit: cover;
 }
 
-/* Shipment details */
 .shipment-details {
 padding: 20px;
 }
@@ -97,7 +95,7 @@ color: #1a73e8;
 margin-top: 10px;
 }
 
-/* Action buttons */
+
 .shipment-actions {
 display: flex;
 flex-wrap: wrap;
@@ -115,7 +113,7 @@ cursor: pointer;
 transition: background-color 0.2s ease;
 }
 
-/* Button styles */
+
 .details-button {
 background-color: #6c757d;
 color: white;
@@ -161,7 +159,7 @@ color: white;
 background-color: #c82333;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
 .shipment-actions {
 flex-direction: column;

@@ -1,6 +1,6 @@
 
 
-/* Navbar Container */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -13,21 +13,21 @@
   z-index: 1000;
 }
 
-/* Logo */
+
 .nav-logo {
   font-size: 22px;
   font-weight: bold;
   color: #38bdf8;
 }
 
-/* Links Wrapper */
+
 .nav-links {
   display: flex;
   gap: 25px;
   align-items: center;
 }
 
-/* Direct Links (Home, Login) */
+
 .nav-link {
   color: white;
   font-size: 16px;
@@ -39,7 +39,7 @@
   color: #38bdf8;
 }
 
-/* Login Link Special Styling */
+
 .login-link {
   padding: 6px 14px;
   border: 1px solid #38bdf8;
@@ -52,7 +52,7 @@
   color: #1e293b;
 }
 
-/* Dropdown */
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -93,12 +93,11 @@
   color: #38bdf8;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: flex;
 }
 
-/* Hamburger for Mobile */
+
 .hamburger {
   display: none;
   font-size: 26px;
@@ -106,7 +105,7 @@
   color: white;
 }
 
-/* Mobile responsive */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;

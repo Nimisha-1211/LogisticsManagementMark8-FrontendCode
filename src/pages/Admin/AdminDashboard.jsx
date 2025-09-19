@@ -18,7 +18,7 @@ const AdminDashboard = () => {
 
         if (data.success) {
           setStats(data.stats);
-          // Only keep top 3 activities
+          
           setRecentActivity(data.recentActivity.slice(0, 3));
         } else {
           console.error("Failed to fetch dashboard stats:", data.message);

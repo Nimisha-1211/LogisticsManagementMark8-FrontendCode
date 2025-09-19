@@ -10,7 +10,7 @@ function DeliveryDashboard() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        // ✅ Fetch orders assigned to driver
+        
         const res = await fetch(
           `http://localhost:3000/driver/driver/orders/${driverId}`
         );
@@ -21,7 +21,7 @@ function DeliveryDashboard() {
 
         setShipments(data);
 
-        // ✅ Notifications from orders
+      
         setNotifications(""
         );
 
@@ -41,7 +41,7 @@ function DeliveryDashboard() {
     );
     setShipments(updatedShipments);
 
-    // ✅ Update status in backend
+    
     fetch(`http://localhost:3000/orders/${id}/status`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },

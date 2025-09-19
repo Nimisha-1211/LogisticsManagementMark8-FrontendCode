@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { dummyShipments } from "./UserDashboard"; // ✅ shared dummy data
+import { dummyShipments } from "./UserDashboard"; 
 
 const CreateNewShipment = () => {
   const navigate = useNavigate();
@@ -32,12 +32,12 @@ const CreateNewShipment = () => {
       quantity: Number(form.quantity),
     };
 
-    // ✅ Add new shipment to the shared dummy data
+    
     dummyShipments.push(newShipment);
 
     alert("✅ Shipment Created Successfully!");
 
-    // ✅ Navigate back to My Shipments page
+    
     navigate("/user/my-shipments");
   };
 

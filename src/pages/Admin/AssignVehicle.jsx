@@ -3,21 +3,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AssignVehicle = () => {
-  // Dummy data for shipments
+  
   const shipments = [
     { id: "S1", name: "Shipment A" },
     { id: "S2", name: "Shipment B" },
     { id: "S3", name: "Shipment C" },
   ];
 
-  // Dummy data for vehicles
+  
   const vehicles = [
     { id: "V101", name: "Truck 101" },
     { id: "V202", name: "Van 202" },
     { id: "V303", name: "Bike 303" },
   ];
 
-  // Preloaded dummy assignments
+  
   const [assignments, setAssignments] = useState([
     {
       id: 1,

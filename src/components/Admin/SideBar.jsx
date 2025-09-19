@@ -12,7 +12,7 @@ function Sidebar() {
         <li className="nav-item"><Link className="nav-link text-white" to="/admin/warehouse">Warehouse Overview</Link></li>
         <li className="nav-item"><Link className="nav-link text-white" to="/admin/assign-tasks">Assign Tasks</Link></li>
         <li className="nav-item"><Link className="nav-link text-white" to="/admin/reports">Reports</Link></li>
-        {/* <li className="nav-item"><Link className="nav-link text-white" to="/admin/settings">Settings</Link></li> */}
+        
         <li className="nav-item"><Link className="nav-link text-white" to="/">Logout</Link></li>
       </ul>
     </div>
